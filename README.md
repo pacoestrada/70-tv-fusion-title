@@ -132,7 +132,8 @@ GitHub Actions repite automáticamente las comprobaciones portables en cada camb
 ```text
 .
 ├── dist/
-│   └── 70 TV.drfx
+│   ├── 70 TV.drfx
+│   └── README.md
 ├── docs/
 │   ├── 70-TV-preview.png
 │   └── ARCHITECTURE.md
@@ -169,4 +170,3 @@ Este es un proyecto comunitario independiente. **DaVinci Resolve** y **Blackmagi
 
 - Español: este documento.
 - [English](README.en.md)
-
