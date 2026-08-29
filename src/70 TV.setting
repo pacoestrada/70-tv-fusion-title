@@ -1,0 +1,377 @@
+{
+	Tools = ordered() {
+		TV70 = GroupOperator {
+			CtrlWZoom = false,
+			Inputs = ordered() {
+				MainText = InstanceInput {
+					SourceOp = "TextMask",
+					Source = "StyledText",
+					Name = "Texto principal",
+					Page = "Controls",
+				},
+				Font = InstanceInput {
+					SourceOp = "TextMask",
+					Source = "Font",
+					Name = "Tipografía",
+					ControlGroup = 2,
+				},
+				Style = InstanceInput {
+					SourceOp = "TextMask",
+					Source = "Style",
+					Name = "Estilo",
+					ControlGroup = 2,
+				},
+				TextSize = InstanceInput {
+					SourceOp = "TextMask",
+					Source = "Size",
+					Name = "Tamaño",
+					Default = 0.18,
+				},
+				Tracking = InstanceInput {
+					SourceOp = "TextMask",
+					Source = "CharacterSpacingClone",
+					Name = "Separación",
+					Default = 1.08,
+				},
+				Position = InstanceInput {
+					SourceOp = "EntryTransform",
+					Source = "Center",
+					Name = "Posición",
+					DefaultX = 0.5,
+					DefaultY = 0.5,
+				},
+				CreamRed = InstanceInput {
+					SourceOp = "CreamColor",
+					Source = "TopLeftRed",
+					Name = "Color crema",
+					ControlGroup = 10,
+					Default = 0.956862745098039,
+				},
+				CreamGreen = InstanceInput {
+					SourceOp = "CreamColor",
+					Source = "TopLeftGreen",
+					ControlGroup = 10,
+					Default = 0.882352941176471,
+				},
+				CreamBlue = InstanceInput {
+					SourceOp = "CreamColor",
+					Source = "TopLeftBlue",
+					ControlGroup = 10,
+					Default = 0.709803921568627,
+				},
+				CreamAlpha = InstanceInput {
+					SourceOp = "CreamColor",
+					Source = "TopLeftAlpha",
+					ControlGroup = 10,
+					Default = 1,
+				},
+				OrangeRed = InstanceInput {
+					SourceOp = "OrangeColor",
+					Source = "TopLeftRed",
+					Name = "Color naranja",
+					ControlGroup = 11,
+					Default = 0.850980392156863,
+				},
+				OrangeGreen = InstanceInput {
+					SourceOp = "OrangeColor",
+					Source = "TopLeftGreen",
+					ControlGroup = 11,
+					Default = 0.419607843137255,
+				},
+				OrangeBlue = InstanceInput {
+					SourceOp = "OrangeColor",
+					Source = "TopLeftBlue",
+					ControlGroup = 11,
+					Default = 0.156862745098039,
+				},
+				OrangeAlpha = InstanceInput {
+					SourceOp = "OrangeColor",
+					Source = "TopLeftAlpha",
+					ControlGroup = 11,
+					Default = 1,
+				},
+				BrownRed = InstanceInput {
+					SourceOp = "BrownColor",
+					Source = "TopLeftRed",
+					Name = "Color marrón",
+					ControlGroup = 12,
+					Default = 0.352941176470588,
+				},
+				BrownGreen = InstanceInput {
+					SourceOp = "BrownColor",
+					Source = "TopLeftGreen",
+					ControlGroup = 12,
+					Default = 0.176470588235294,
+				},
+				BrownBlue = InstanceInput {
+					SourceOp = "BrownColor",
+					Source = "TopLeftBlue",
+					ControlGroup = 12,
+					Default = 0.12156862745098,
+				},
+				BrownAlpha = InstanceInput {
+					SourceOp = "BrownColor",
+					Source = "TopLeftAlpha",
+					ControlGroup = 12,
+					Default = 1,
+				}
+			},
+			Outputs = {
+				MainOutput1 = InstanceOutput {
+					SourceOp = "TimeStretch",
+					Source = "Result",
+					Name = "Output",
+				}
+			},
+			ViewInfo = GroupInfo {
+				Pos = { 110, 49.5 },
+				Flags = {
+					AllowPan = false,
+					ConnectedSnap = true,
+					AutoSnap = true,
+					RemoveRouters = true
+				},
+				Size = { 660, 180, 330, 24.2424 },
+				Direction = "Horizontal",
+				PipeStyle = "Direct",
+				Scale = 1,
+				Offset = { 0, 0 }
+			},
+			Tools = ordered() {
+				TextMask = TextPlus {
+					CtrlWZoom = false,
+					CtrlWShown = false,
+					Inputs = {
+						GlobalOut = Input { Value = 119, },
+						Width = Input { Value = 1920, },
+						Height = Input { Value = 1080, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						StyledText = Input { Value = "70 TV", },
+						Font = Input { Value = "Montserrat Alternates", },
+						Style = Input { Value = "Bold", },
+						Size = Input { Value = 0.18, },
+						CharacterSpacing = Input { Value = 1.08, },
+						VerticalJustificationNew = Input { Value = 3, },
+						HorizontalJustificationNew = Input { Value = 3, },
+						Opacity1 = Input {
+							SourceOp = "EntryOpacity",
+							Source = "Value",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { -550, 0 } },
+				},
+				OrangeStep1 = Transform {
+					CtrlWShown = false,
+					Inputs = {
+						Center = Input { Value = { 0.504, 0.493 }, },
+						Edges = Input { Value = 1, },
+						Input = Input {
+							SourceOp = "TextMask",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { -385, -70 } },
+				},
+				OrangeStep2 = Transform {
+					CtrlWShown = false,
+					Inputs = {
+						Center = Input { Value = { 0.508, 0.486 }, },
+						Edges = Input { Value = 1, },
+						Input = Input {
+							SourceOp = "TextMask",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { -385, 0 } },
+				},
+				OrangeStep3 = Transform {
+					CtrlWShown = false,
+					Inputs = {
+						Center = Input { Value = { 0.512, 0.479 }, },
+						Edges = Input { Value = 1, },
+						Input = Input {
+							SourceOp = "TextMask",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { -385, 70 } },
+				},
+				OrangeMerge1 = Merge {
+					CtrlWShown = false,
+					Inputs = {
+						Background = Input {
+							SourceOp = "OrangeStep3",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "OrangeStep2",
+							Source = "Output",
+						},
+						PerformDepthMerge = Input { Value = 0, }
+					},
+					ViewInfo = OperatorInfo { Pos = { -220, 35 } },
+				},
+				OrangeMerge2 = Merge {
+					CtrlWShown = false,
+					Inputs = {
+						Background = Input {
+							SourceOp = "OrangeMerge1",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "OrangeStep1",
+							Source = "Output",
+						},
+						PerformDepthMerge = Input { Value = 0, }
+					},
+					ViewInfo = OperatorInfo { Pos = { -55, 35 } },
+				},
+				OrangeColor = Background {
+					CtrlWShown = false,
+					Inputs = {
+						EffectMask = Input {
+							SourceOp = "OrangeMerge2",
+							Source = "Output",
+						},
+						GlobalOut = Input { Value = 119, },
+						Width = Input { Value = 1920, },
+						Height = Input { Value = 1080, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						TopLeftRed = Input { Value = 0.850980392156863, },
+						TopLeftGreen = Input { Value = 0.419607843137255, },
+						TopLeftBlue = Input { Value = 0.156862745098039, },
+						TopLeftAlpha = Input { Value = 1, }
+					},
+					ViewInfo = OperatorInfo { Pos = { 110, 35 } },
+				},
+				BrownStep = Transform {
+					CtrlWShown = false,
+					Inputs = {
+						Center = Input { Value = { 0.518, 0.468 }, },
+						Edges = Input { Value = 1, },
+						Input = Input {
+							SourceOp = "TextMask",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { -220, 140 } },
+				},
+				BrownColor = Background {
+					CtrlWShown = false,
+					Inputs = {
+						EffectMask = Input {
+							SourceOp = "BrownStep",
+							Source = "Output",
+						},
+						GlobalOut = Input { Value = 119, },
+						Width = Input { Value = 1920, },
+						Height = Input { Value = 1080, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						TopLeftRed = Input { Value = 0.352941176470588, },
+						TopLeftGreen = Input { Value = 0.176470588235294, },
+						TopLeftBlue = Input { Value = 0.12156862745098, },
+						TopLeftAlpha = Input { Value = 1, }
+					},
+					ViewInfo = OperatorInfo { Pos = { 110, 140 } },
+				},
+				CreamColor = Background {
+					CtrlWShown = false,
+					Inputs = {
+						EffectMask = Input {
+							SourceOp = "TextMask",
+							Source = "Output",
+						},
+						GlobalOut = Input { Value = 119, },
+						Width = Input { Value = 1920, },
+						Height = Input { Value = 1080, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						TopLeftRed = Input { Value = 0.956862745098039, },
+						TopLeftGreen = Input { Value = 0.882352941176471, },
+						TopLeftBlue = Input { Value = 0.709803921568627, },
+						TopLeftAlpha = Input { Value = 1, }
+					},
+					ViewInfo = OperatorInfo { Pos = { 110, -70 } },
+				},
+				MergeDepth = Merge {
+					CtrlWShown = false,
+					Inputs = {
+						Background = Input {
+							SourceOp = "BrownColor",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "OrangeColor",
+							Source = "Output",
+						},
+						PerformDepthMerge = Input { Value = 0, }
+					},
+					ViewInfo = OperatorInfo { Pos = { 275, 70 } },
+				},
+				MergeFace = Merge {
+					CtrlWShown = false,
+					Inputs = {
+						Background = Input {
+							SourceOp = "MergeDepth",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "CreamColor",
+							Source = "Output",
+						},
+						PerformDepthMerge = Input { Value = 0, }
+					},
+					ViewInfo = OperatorInfo { Pos = { 440, 35 } },
+				},
+				EntryTransform = Transform {
+					CtrlWShown = false,
+					Inputs = {
+						Center = Input { Value = { 0.5, 0.5 }, },
+						Size = Input {
+							SourceOp = "EntryScale",
+							Source = "Value",
+						},
+						Pivot = Input { Value = { 0.5, 0.5 }, },
+						Edges = Input { Value = 1, },
+						Input = Input {
+							SourceOp = "MergeFace",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 605, 35 } },
+				},
+				TimeStretch = KeyStretcher {
+					Inputs = {
+						Keyframes = Input {
+							SourceOp = "EntryTransform",
+							Source = "Output",
+						},
+						SourceEnd = Input { Value = 119, },
+						StretchStart = Input { Value = 18, },
+						StretchEnd = Input { Value = 118, }
+					},
+					ViewInfo = OperatorInfo { Pos = { 770, 35 } },
+				},
+				EntryScale = BezierSpline {
+					SplineColor = { Red = 245, Green = 134, Blue = 33 },
+					KeyFrames = {
+						[0] = { 0.82, RH = { 4, 0.82 } },
+						[11] = { 1.055, LH = { 7.5, 1.02 }, RH = { 13.2, 1.045 } },
+						[18] = { 1, LH = { 15, 1 } }
+					}
+				},
+				EntryOpacity = BezierSpline {
+					SplineColor = { Red = 179, Green = 28, Blue = 244 },
+					KeyFrames = {
+						[0] = { 0, RH = { 4, 0 } },
+						[12] = { 1, LH = { 8, 1 } }
+					}
+				}
+			}
+		}
+	},
+	ActiveTool = "TV70"
+}
