@@ -1,0 +1,61 @@
+name: Bug report
+description: Report a problem installing or using 70 TV.
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for helping improve 70 TV.
+  - type: input
+    id: resolve-version
+    attributes:
+      label: DaVinci Resolve version
+      description: Include version, build and Free/Studio edition.
+      placeholder: "21.0.3 build 7, Studio"
+    validations:
+      required: true
+  - type: input
+    id: operating-system
+    attributes:
+      label: Operating system
+      placeholder: "Linux Mint 22.1"
+    validations:
+      required: true
+  - type: dropdown
+    id: installation
+    attributes:
+      label: Installation method
+      options:
+        - DRFX bundle
+        - Manual SETTING file
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened?
+      description: Describe the expected and actual behavior.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction steps
+      placeholder: |
+        1. Open...
+        2. Drag...
+        3. See...
+    validations:
+      required: true
+  - type: input
+    id: timeline
+    attributes:
+      label: Timeline format
+      placeholder: "1920×1080, 25 fps"
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Screenshots or logs
+      description: Remove personal or confidential information before posting.
+
