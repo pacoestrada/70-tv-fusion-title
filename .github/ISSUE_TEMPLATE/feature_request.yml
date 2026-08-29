@@ -1,0 +1,31 @@
+name: Feature request
+description: Suggest an improvement or a new 70 TV variant.
+title: "[Feature]: "
+labels:
+  - enhancement
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: Proposal
+      description: What would you like to add or change?
+    validations:
+      required: true
+  - type: textarea
+    id: use-case
+    attributes:
+      label: Use case
+      description: How would this help in a real edit?
+    validations:
+      required: true
+  - type: dropdown
+    id: compatibility
+    attributes:
+      label: Must this preserve current project compatibility?
+      options:
+        - Yes
+        - No, it can be a separate variant
+        - Unsure
+    validations:
+      required: true
+
